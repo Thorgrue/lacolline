@@ -1,21 +1,69 @@
-<!-- Photo d'accueil -->
-<div class="h-80 bg-blue-400 flex items-center">
-  <p class="w-full text-center italic">Je suis une grande image de la Colline but Gaëlle's lazy</p>
+<!-- Paralax 1) Photo d'accueil -->
+<div class="sticky top-0 h-72 bg-doux flex items-center">
+  <p class="w-full text-center italic">Je suis une grande image de la Colline</p>
 </div>
 
 <!-- Corps de la page -->
-<div class="px-40">
-<!-- Catchline -->
+<div class="px-40 w-full">
+  <!-- Catchline -->
   <div class="h-40 flex items-center">
-    <p class="w-full text-center text-xl">« Catch line de fou à base d'authenticité et de love »</p>
+    <p class="w-full font-gloria text-ciel text-center text-xl">« Catch line de fou à base d'authenticité et de love »</p>
   </div>
 
-<!-- Soustitre -->
-  <div class="h-40 w-full text-lg text-center">
+  <!-- Soustitre -->
+  <div class="mb-16 text-lg text-center">
     <p class="py-2">Séjour authentique dans cette ancienne magnanerie du XVII siècle, située en pleine nature, aux pieds de la falaise d'Eyzahut.
       <br>
       Bien rénovée en 3 gîtes indépendants, vous y trouverez calme, détente et ressourcement.</p>
     <p class="py-2">Hors-saison, vous pourrez profiter de la Colline à tarif tout doux
     à la semaine ou sur un grand week-end.</p>
+  </div>
+
+  <!-- Les gites -->
+  <div class="flex justify-between">
+    <% @gites.each do |gite| %>
+      <% path = "#{gite.downcase.gsub(" ","_")}" %>
+      <p class="p-28 bg-ble bg-opacity-50 shadow"><%= link_to gite, path %></p>
+    <% end %>
+  </div>
+
+  <!-- Bouton -->
+  <button class="my-8 center bg-ciel px-8 py-2 rounded-xl shadow">
+    <% path = "gites" %>
+    <%= link_to "Voir nos gîtes", path %>
+  </button>
+</div>
+
+<!-- Paralax 2) La Drôme Provençale -->
+<div class="sticky top-0 h-72 bg-doux flex items-center">
+  <p class="w-full text-center italic">Je suis une grande image de la Drôme</p>
+</div>
+
+<!-- Corps de la page -->
+<div class="px-40 w-full">
+  <!-- Paragraphes -->
+  <div class="my-10 text-lg text-center text-justify">
+    <p class="py-2">A la frontière du Dauphiné et de la Provence, la Drôme Provençale se situe à l'Est de Montélimar et s'étend sur la rive gauche de la rivière Drôme. Elle jouit d'un <span class="text-ble">ensoleillement</span> digne de celui de la Provence, grâce à son climat déjà plus méditerranéen.</p>
+    <p class="py-2">Voilà pourquoi les champs de <span class="text-doux">lavande</span>, les vergers d'oliviers et d'arbres fruitiers, les vignes et les chênes verts s'étendent à perte de vue.</p>
+    <p class="py-2">Véritable terre de charme, la Drôme Provençale est parsemée de villages classés (Le Poët-Laval, La Garde-Adhémar, Montbrun-les-Bains). Souvent perchés, ils ont gardé leur allure médiévale avec leurs ruelles étroites et pavées, leurs châteaux, leurs églises ou chapelles romanes.</p>
+    <p class="py-2">Beaucoup <span class="text-ble">d'artistes et d'artisans</span> s'y sont installés reprenant à leur compte des traditions ancestrales: potiers, céramistes, ébénistes, verriers, tapissiers, forgerons..</p>
+    <p class="py-2">Côté nature, la diversité des paysages s'étendant du massif du Vercors au nord, jusqu'à la large plaine de Montélimar en passant par la vallée de la Drôme ou les <span class="text-doux">bords du Roubion</span> ravira tous les amateurs d'espace et de beauté un peu sauvage.</p>
+  </div>
+</div>
+
+<!-- Paralax 3) Les activités loisirs -->
+<div class="sticky top-0 h-72 bg-doux flex items-center">
+  <p class="w-full text-center italic">Je suis une grande image d'activités loisirs</p>
+</div>
+
+<!-- Corps de la page -->
+<div class="px-40 w-full">
+  <!-- Paragraphes -->
+  <div class="my-10 text-lg text-center text-justify">
+    <p class="py-2">De nombreuses activitées sont accessibles depuis <span class="text-doux">La Colline</span>. Venez prendre le temps de vous détendre et d'en profiter !</p>
+    <p class="py-2">Côté nature, vous trouverez, été comme hiver de superbes randonnées pédestres ou circuits en vélo. Vous pouvez aussi opter pour un moment de farniente au calme ou baignade dans la rivière à 10 minutes. Il y a une piscine à Eyzahut, mais rien ne vaut le plaisir de tremper un pied ou de piquer une tête dans une rivière sauvage.</p>
+    <p class="py-2">Pour des découvertes gastronomiques ou culturelles, vous trouverez probablement votre bonheur dans les spécialités de la région ! Le nougat de Montélimar, l'Olive noire de Nyons, les truffes de la Drôme des Collines, le pintadeau de la Drôme, le Picodon ou "Picaoudou", le Bleu du Vercors-Sassenage, les ravioles de Romans... De quoi régaler vos papilles !</p>
+    <p class="py-2">La douceur du climat et la pureté de l'air sont favorables à l'activité physique comme au sommeil. Rallonger un poil le paragraphe serait idéal hahaha Si possible un poil de taille plutôt massive, histoire que vraiment, il y est plus de texte et que le paralax puisse jouer son rôle un max.</p>
+    <p class="py-2">Enjoy !</p>
   </div>
 </div>
